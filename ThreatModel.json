@@ -1,0 +1,1304 @@
+{
+  "summary": {
+    "title": "New Threat Model",
+    "owner": "Rachel Jones"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Contact Tracing App",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0,
+        "$$hashKey": "object:41",
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 34,
+                "y": 40
+              },
+              "angle": 0,
+              "id": "c4d61cd4-6e3b-4d2b-b88f-17ffb2f1ed50",
+              "z": 1,
+              "hasOpenThreats": true,
+              "outOfScope": false,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Phishing",
+                  "type": "Spoofing",
+                  "description": "The attempt to obtain sensitive information or data, such as usernames, passwords and credit card details, by disguising oneself as a trustworthy entity in an electronic communication.",
+                  "mitigation": "Protect computer by using security software, set the software to update automatically so it can deal with any new security threats.\nProtect mobile phone by setting software to update automatically, these updates could give critical protection against security threats.\nMulti-factor authentication makes it harder for scammers to log in to your accounts if they do get your username and password.\nIf you get a phishing email or text message, report it, the information given can help fight the scammers.\nComputer training should include modules that teach users to recognize security threats, potentially dangerous websites, phishing attempts, and another social engineering that they may encounter.",
+                  "$$hashKey": "object:1140"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Weak Antivirus Software",
+                  "type": "Elevation of privilege",
+                  "description": "Weak antivirus software can lead to hackers improving their methods and find ways to to work around this weak software. As a result, these attacks can be difficult to detect and can do a lot of damage before any action can be taken.",
+                  "mitigation": "Organizations should take a multi-pronged approach. This includes using multiple products that specialize in email scanning, proxy filtering, and detection of malware. It’s also imperative that security products are kept updated.",
+                  "$$hashKey": "object:206"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Repudiation attack",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A repudiation attack happens when an application or system does not adopt controls to properly track and log users’ actions, thus permitting malicious manipulation or forging the identification of new actions.",
+                  "mitigation": "Implement auditing to catch and trace these activities.",
+                  "$$hashKey": "object:226"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Browser Extenstions and Plugins",
+                  "type": "Tampering",
+                  "description": "Extensions and plugins can be used to offer improved experiences online, and to add helpful functionality to websites. However some are created with malicious intent and others are simply poorly made, creating vulnerabilities in the browsers in which they are installed. These can provide a pathway for hackers to steal data or install ransomware.",
+                  "mitigation": "Organisations can take action by creating a policy that forbids users from installing extensions and plugins that don’t have a business purpose. They can even create a list of allowed extensions and plugins and take action to block those that are not on the approved list.",
+                  "$$hashKey": "object:246"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Botnet Malware",
+                  "type": "Information disclosure",
+                  "description": "A botnet’s strategy essentially determines its development, laying the foundation of bots for further exploitation. Once an attacker has compromised a machine on a network, there is a possibility that all vulnerable computers on that network become infected.",
+                  "mitigation": "Use a firewall\nUpadate your software and systems to the lastest version\nGet protection that works at DNS-level\nManage admin rights in the organisation",
+                  "$$hashKey": "object:252"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Cryptojacking",
+                  "type": "Repudiation",
+                  "description": "Cryptojacking is the unauthorized use of someone else’s computer to mine cryptocurrency. Hackers do this by infecting a website or online ad with JavaScript code that auto-executes once loaded in the victim’s browser.",
+                  "mitigation": "Incorporate the cryptojacking threat into your security awareness training, focusing on phishing-type attempts to load scripts onto users’ computers. \nInstall an ad-blocking or anti-cryptomining extension on web browsers.",
+                  "$$hashKey": "object:263"
+                }
+              ],
+              "description": "a computer program with a graphical user interface for displaying and navigating between web pages.",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Browser"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 40,
+                "y": 272
+              },
+              "angle": 0,
+              "id": "8655f4c9-0691-4e30-ade6-04570a540f57",
+              "z": 2,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "API"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 321,
+                "y": 200
+              },
+              "angle": 0,
+              "id": "73a47114-676b-468a-a094-713e13a44fed",
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "DDoS Attack",
+                  "type": "Denial of service",
+                  "description": "A malicious attempt to disrupt the normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.",
+                  "$$hashKey": "object:432",
+                  "mitigation": "Create a blackhole route and funnel traffic into that route. When blackhole filtering is implemented without specific restriction criteria, both legitimate and malicious network traffic is routed to a null route, or blackhole, and dropped from the network.\nA Web Application Firewall (WAF) is a tool that can assist in mitigating a layer 7 DDoS attack."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Failing to implement all the security controls for a server or web application, or implementing the security controls, but doing so with errors.",
+                  "title": "Security Misconfiguration",
+                  "type": "Information disclosure",
+                  "$$hashKey": "object:481",
+                  "mitigation": "Configure server to prevent unauthorized access, directory listing, etc.\nConsider running scans and doing audits periodically to help detect future misconfigurations or missing patches."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user.",
+                  "title": "Broken Access Control",
+                  "type": "Information disclosure",
+                  "$$hashKey": "object:523",
+                  "mitigation": "Deny access to functionality by default.\nUse Access control lists and role-based authentication mechanisms."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Sensitive Data Exposure",
+                  "type": "Information disclosure",
+                  "description": "Data exposure is when data is left exposed in a database or server for anyone to see. Sensitive data can be exposed when configuration details for systems and applications are left unsecured online.",
+                  "$$hashKey": "object:572",
+                  "mitigation": "Implement high-quality security software. Install and use a software suite that includes malware and virus protection and always keep it updated"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Broken Authentication",
+                  "description": "Application functions related to authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws to assume other users’ identities temporarily or permanently.",
+                  "type": "Elevation of privilege",
+                  "$$hashKey": "object:614",
+                  "mitigation": "Implement multi-factor authentication\nControl Session Length. Every web application automatically ends sessions at some point, either after logout, a period of no activity, or a certain length of time."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "SQL Injection",
+                  "type": "Information disclosure",
+                  "description": "SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution.",
+                  "$$hashKey": "object:663",
+                  "mitigation": "Web application firewall (WAF) – either software or appliance-based – to help filter out malicious data.\nContinuously monitor SQL statements from database-connected applications. This will help identify rogue SQL statements and vulnerabilities. Monitoring tools that utilize machine learning and/or behavioral analysis can be especially useful."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "The attempt to obtain sensitive information or data, such as usernames, passwords and credit card details, by disguising oneself as a trustworthy entity in an electronic communication.",
+                  "type": "Spoofing",
+                  "title": "Phising",
+                  "$$hashKey": "object:754",
+                  "mitigation": "Protect computer by using security software, set the software to update automatically so it can deal with any new security threats.\nProtect mobile phone by setting software to update automatically, these updates could give critical protection against security threats.\nMulti-factor authentication makes it harder for scammers to log in to your accounts if they do get your username and password.\nIf you get a phishing email or text message, report it, the information given can help fight the scammers.\nComputer training should include modules that teach users to recognize security threats, potentially dangerous websites, phishing attempts, and another social engineering that they may encounter."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web\nApplication"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 100,
+                "y": 490
+              },
+              "angle": 0,
+              "id": "851c9b26-abd2-4ebc-bbca-77d3ca30d72b",
+              "z": 4,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Improper file and directory permissions",
+                  "description": "Improper permissions allow the attacker to access restricted files or directories and modify or delete their contents.",
+                  "type": "Information disclosure",
+                  "mitigation": "Perform regular security protocol assessments",
+                  "$$hashKey": "object:1015"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Unpatched Security Flaws",
+                  "description": "Unpatched vulnerabilities allow attackers to run a malicious code by leveraging a known security bug that has not been patched.",
+                  "type": "Information disclosure",
+                  "mitigation": "Run security checks on third-party platforms and make sure that any security weaknesses are resolved.",
+                  "$$hashKey": "object:407"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Administrative accounts with default passwords",
+                  "type": "Information disclosure",
+                  "mitigation": "Update passwords regularly and use multi-factor authentication",
+                  "description": "A default password is a standard pre-configured password for a device. Such passwords are the default configuration for many devices and lead to serious secuirty risks",
+                  "$$hashKey": "object:1049"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "SSL certificates and encryption settings not properly configured",
+                  "type": "Tampering",
+                  "mitigation": "Perform regular security protocol assessments.\nopt for cybersecurity automation through a data protection platform.",
+                  "description": "The most common cause of a \"certificate not trusted\" error is that the certificate installation was not properly completed on the server (or servers) hosting the site.",
+                  "$$hashKey": "object:1270"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web Application\nConfiguration"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 708,
+                "y": 484
+              },
+              "angle": 0,
+              "id": "3beb829d-ac41-4379-9583-a55722522e59",
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Tampering Based Attacks",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attackers insert malicious files that change the configuration of a network or system, modify user credentials to gain access to sensitive data, or tamper with log files.",
+                  "$$hashKey": "object:886",
+                  "mitigation": "Enforce Encryption for Data-at-Rest and Data-in-Transit.\nCopy-on-Write File Systems."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Improper File and Directory Permissions",
+                  "type": "Information disclosure",
+                  "description": "Improper permissions allow the attacker to access restricted files or directories and modify or delete their contents.",
+                  "$$hashKey": "object:1005",
+                  "mitigation": "Perform regular security protocol assessments"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Administrative accounts with default passwords",
+                  "description": "A default password is a standard pre-configured password for a device. Such passwords are the default configuration for many devices and lead to serious secuirty risks",
+                  "type": "Information disclosure",
+                  "$$hashKey": "object:1039",
+                  "mitigation": "Update passwords regularly and use multi-factor authentication"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Worker Configuration"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 375,
+                "y": 487
+              },
+              "angle": 0,
+              "id": "2dfb3cf7-e47f-463d-971a-95f9deaba87a",
+              "z": 6,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "NoSQL Attack",
+                  "type": "Information disclosure",
+                  "description": "NoSQL injection vulnerabilities allow attackers to inject code into commands for databases that don’t use SQL queries. Code is injected and executed on the server in the language of the web application, potentially allowing arbitrary code execution.",
+                  "mitigation": "Avoid using unsanitized user inputs in application code, especially when building database queries.",
+                  "$$hashKey": "object:808"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Ransomeware Attack",
+                  "type": "Denial of service",
+                  "description": "Ransomware is malicious software that infects your computer and displays messages demanding a fee to be paid in order for your system to work again.",
+                  "mitigation": "Install security updates as soon as they become available in order to fix exploitable bugs in your products.\nUse the latest versions of OSs and applications to take advantage of the latest security features.\nDisable or constrain scripting environments and macros.",
+                  "$$hashKey": "object:822"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Excessive Database Privileges",
+                  "type": "Information disclosure",
+                  "description": "Database users may have different privileges and users may abuse them. Types include excessive privilege abuse, legitimate privileges abuse and unused privilege abuse.",
+                  "mitigation": "Deploy and uphold a strict access and privileges control policy.\nDon’t grant excessive privileges to company employees and revoke outdated privileges in time.",
+                  "$$hashKey": "object:828"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Weak Audit Trail",
+                  "description": "If a database is not audited it represents risks of noncompliance with national and international sensitive data protection regulations. All database events shall be recorded and registered automatically and it’s obligatory to use automatic auditing solutions.",
+                  "type": "Information disclosure",
+                  "mitigation": "Use automatic auditing solutions that impose no additional load on database performance.",
+                  "$$hashKey": "object:834"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Database Backups Exposure",
+                  "type": "Information disclosure",
+                  "description": "Database back-up files left completely unprotected from attack. As a result, there will be security breaches happening through database backup leaks.",
+                  "mitigation": "Encrypt both databases and backups, storing data in encrypted form allows secure both production and back-up copies of databases.\nAudit both the database and backups, doing this helps to see who has been trying to get access to sensitive data.",
+                  "$$hashKey": "object:840"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "DDoS Attack",
+                  "type": "Denial of service",
+                  "description": "This type of attacks slows down a database server and can even make it unavailable to all users.",
+                  "mitigation": "Harden the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue.\nDecrease the connection establishment period.\nEmploy dynamic backlog mechanisms to ensure that the connection queue is never exhausted.\nUse a network Intrusion Detection System (IDS).",
+                  "$$hashKey": "object:846"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Database"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 625,
+                "y": 13
+              },
+              "angle": 0,
+              "id": "ed9f1a02-06f7-445c-a2bc-d621e61f46fa",
+              "z": 7,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attackers insert malicious files that change the configuration of a network or system, modify user credentials to gain access to sensitive data, or tamper with log files.",
+                  "$$hashKey": "object:1180",
+                  "mitigation": "Enforce Encryption for Data-at-Rest and Data-in-Transit.\nCopy-on-Write File Systems."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A repudiation attack happens when an application or system does not adopt controls to properly track and log users’ actions, thus permitting malicious manipulation or forging the identification of new actions.",
+                  "mitigation": "Implement auditing to catch and trace these activities.",
+                  "$$hashKey": "object:1254"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "DDoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A malicious attempt to disrupt the normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.",
+                  "$$hashKey": "object:1205",
+                  "mitigation": "Create a blackhole route and funnel traffic into that route. When blackhole filtering is implemented without specific restriction criteria, both legitimate and malicious network traffic is routed to a null route, or blackhole, and dropped from the network.\nA Web Application Firewall (WAF) is a tool that can assist in mitigating a layer 7 DDoS attack."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Message Query"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 733,
+                "y": 204
+              },
+              "angle": 0,
+              "id": "8afdd2db-e4e8-4853-a64d-bc284f9abd64",
+              "z": 8,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Unrestricted access to data",
+                  "type": "Information disclosure",
+                  "mitigation": "Only carefully audited modules should be permitted to run background worker processes.",
+                  "description": "Allows you to limit background data used by apps, but whitelist anything that want to have unrestricted access. This means background data is disabled for every app by default, then you can pick and choose where to grant unlimited access.",
+                  "$$hashKey": "object:1062"
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "The attempt to obtain sensitive information or data, such as usernames, passwords and credit card details, by disguising oneself as a trustworthy entity in an electronic communication.",
+                  "$$hashKey": "object:1075",
+                  "mitigation": "Protect computer by using security software, set the software to update automatically so it can deal with any new security threats.\nProtect mobile phone by setting software to update automatically, these updates could give critical protection against security threats.\nMulti-factor authentication makes it harder for scammers to log in to your accounts if they do get your username and password.\nIf you get a phishing email or text message, report it, the information given can help fight the scammers.\nComputer training should include modules that teach users to recognize security threats, potentially dangerous websites, phishing attempts, and another social engineering that they may encounter."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Repudiation Attack",
+                  "type": "Repudiation",
+                  "description": "A repudiation attack happens when an application or system does not adopt controls to properly track and log users’ actions, thus permitting malicious manipulation or forging the identification of new actions.",
+                  "mitigation": "Implement auditing to catch and trace these activities.",
+                  "$$hashKey": "object:1171"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Background\nWorker Process"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "c4d61cd4-6e3b-4d2b-b88f-17ffb2f1ed50"
+              },
+              "target": {
+                "x": 61,
+                "y": 304
+              },
+              "vertices": [
+                {
+                  "x": 45,
+                  "y": 174
+                },
+                {
+                  "x": 51,
+                  "y": 226
+                },
+                {
+                  "x": 55,
+                  "y": 261
+                }
+              ],
+              "id": "e889d719-614f-40cb-88e0-f2142e1cd02c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "API Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 9,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8655f4c9-0691-4e30-ade6-04570a540f57"
+              },
+              "target": {
+                "id": "c4d61cd4-6e3b-4d2b-b88f-17ffb2f1ed50"
+              },
+              "vertices": [
+                {
+                  "x": 111,
+                  "y": 272
+                },
+                {
+                  "x": 167,
+                  "y": 181
+                }
+              ],
+              "id": "eef27f17-5d6c-436e-94cc-7956605d2ef1",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "API Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 10,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "c4d61cd4-6e3b-4d2b-b88f-17ffb2f1ed50"
+              },
+              "target": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "vertices": [
+                {
+                  "x": 344,
+                  "y": 97
+                }
+              ],
+              "id": "645cac65-0312-4e80-948d-6e53b0b105f3",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Web Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 11,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "target": {
+                "id": "c4d61cd4-6e3b-4d2b-b88f-17ffb2f1ed50"
+              },
+              "vertices": [
+                {
+                  "x": 284,
+                  "y": 227
+                },
+                {
+                  "x": 250,
+                  "y": 208
+                },
+                {
+                  "x": 228,
+                  "y": 190
+                },
+                {
+                  "x": 193,
+                  "y": 161
+                }
+              ],
+              "id": "39a30e5f-ae79-4eac-8c06-9a66bd33384d",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6274740057761462,
+                    "offset": -3.90353376306688
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Web Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "target": {
+                "id": "8655f4c9-0691-4e30-ade6-04570a540f57"
+              },
+              "vertices": [],
+              "id": "6b64ddeb-e774-4dac-bc12-10c7b8462555",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6214105765381928,
+                    "offset": 12.191557490381305
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "API Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 133,
+                "y": 344
+              },
+              "target": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "vertices": [],
+              "id": "7313ed1d-9245-4070-b75b-d52273f9c852",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5270251675142137,
+                    "offset": 11.084760414106249
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "API Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "851c9b26-abd2-4ebc-bbca-77d3ca30d72b"
+              },
+              "target": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "vertices": [
+                {
+                  "x": 323,
+                  "y": 349
+                }
+              ],
+              "id": "21904294-3697-4857-9f58-8d9b17ef2784",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.49790132386074964,
+                    "offset": -7.879861361613042
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Read Web Application\nConfiguration",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 15,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "target": {
+                "x": 420,
+                "y": 486
+              },
+              "vertices": [
+                {
+                  "x": 383,
+                  "y": 386
+                }
+              ],
+              "id": "cd1d98ae-e246-49b4-bee2-8f5c47aebb73",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6327855750773851,
+                    "offset": 23.76006906117746
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Queries",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 456,
+                "y": 484
+              },
+              "target": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "vertices": [
+                {
+                  "x": 447,
+                  "y": 402
+                },
+                {
+                  "x": 437,
+                  "y": 374
+                }
+              ],
+              "id": "06b6f884-facc-437a-b9db-7470fe02a326",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6366200922161412,
+                    "offset": 12.120389566364869
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Web Application\nQuery Results",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "2dfb3cf7-e47f-463d-971a-95f9deaba87a"
+              },
+              "target": {
+                "id": "8afdd2db-e4e8-4853-a64d-bc284f9abd64"
+              },
+              "vertices": [
+                {
+                  "x": 547,
+                  "y": 356
+                }
+              ],
+              "id": "4b267c25-08e1-4483-819d-8a8febbd7870",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6016061177711772,
+                    "offset": -17.262379806540324
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Worker Query Results",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8afdd2db-e4e8-4853-a64d-bc284f9abd64"
+              },
+              "target": {
+                "id": "2dfb3cf7-e47f-463d-971a-95f9deaba87a"
+              },
+              "vertices": [
+                {
+                  "x": 654,
+                  "y": 359
+                }
+              ],
+              "id": "8bb5c4f7-6370-40e8-a423-acf12972469a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Worker Queries",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 19,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "3beb829d-ac41-4379-9583-a55722522e59"
+              },
+              "target": {
+                "id": "8afdd2db-e4e8-4853-a64d-bc284f9abd64"
+              },
+              "vertices": [],
+              "id": "3a69de55-6301-4e7f-a09c-d0921e340ca8",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5300934845581651,
+                    "offset": 2
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Read Worker\nConfiguration",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 20,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "73a47114-676b-468a-a094-713e13a44fed"
+              },
+              "target": {
+                "id": "ed9f1a02-06f7-445c-a2bc-d621e61f46fa"
+              },
+              "vertices": [
+                {
+                  "x": 537,
+                  "y": 84
+                }
+              ],
+              "id": "14c98fa7-5ce8-4b88-8b4c-e2e629fada8e",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5114595606485096,
+                    "offset": -18.808827707055123
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Put Message",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 21,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "ed9f1a02-06f7-445c-a2bc-d621e61f46fa"
+              },
+              "target": {
+                "id": "8afdd2db-e4e8-4853-a64d-bc284f9abd64"
+              },
+              "vertices": [],
+              "id": "4056483b-3397-44ed-8de4-91a71136825e",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5938825247432303,
+                    "offset": -28.673580535919058
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Message",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 22,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 208,
+                "y": 267
+              },
+              "target": {
+                "x": 460,
+                "y": 121
+              },
+              "vertices": [
+                {
+                  "x": 289,
+                  "y": 148
+                }
+              ],
+              "id": "6deda3b9-ed88-4001-b96c-d6a54191b120",
+              "z": 23,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 574,
+                "y": 9
+              },
+              "target": {
+                "x": 599,
+                "y": 133
+              },
+              "vertices": [
+                {
+                  "x": 546,
+                  "y": 77
+                }
+              ],
+              "id": "ccb004ae-0b01-47ae-b28d-0ada4be73149",
+              "z": 24,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 857,
+                "y": 110
+              },
+              "target": {
+                "x": 699,
+                "y": 209
+              },
+              "vertices": [
+                {
+                  "x": 821,
+                  "y": 108
+                },
+                {
+                  "x": 703,
+                  "y": 118
+                }
+              ],
+              "id": "2c72d6b2-849e-4bca-90c7-b11696537160",
+              "z": 25,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 583,
+                "y": 526
+              },
+              "target": {
+                "x": 335,
+                "y": 529
+              },
+              "vertices": [
+                {
+                  "x": 559,
+                  "y": 400
+                },
+                {
+                  "x": 511,
+                  "y": 371
+                },
+                {
+                  "x": 422,
+                  "y": 403
+                }
+              ],
+              "id": "0e4416bf-a4de-4e31-9972-333753b82cd2",
+              "z": 26,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 888
+        }
+      }
+    ]
+  }
+}
